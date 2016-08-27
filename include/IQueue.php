@@ -1,7 +1,7 @@
 <?php
 /**
  * 
- * @author Juraj Puchký - Devtech s.r.o.
+ * @author Juraj Puchký - Devtech s.r.o. <jpuchky@devtech.cz>
  * @site	http://www.devtech.cz
  *
  */
