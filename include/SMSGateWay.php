@@ -18,8 +18,8 @@ class SMSGateWay implements IGateWay {
 	}
 	public function sendMessage($toNumber, $message) {
 		// Securize
-		$snumber = str_replace(";", " ", addslashes($toNumber));
-		$smessage = str_replace(";", " ", addslashes($message));
+		$snumber = str_replace(";", "\\;", addslashes($toNumber));
+		$smessage = str_replace(";", "\\;", addslashes($message));
 		
 		$msg = array (
 				"number" => $snumber,
