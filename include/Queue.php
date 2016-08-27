@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__.'/IQueue.php';
 /**
  *
  * @author Juraj Puchký - Devtech s.r.o. <jpuchky@devtech.cz>
@@ -43,8 +44,7 @@ class Queue implements IQueue {
 	 * {@inheritDoc}
 	 * @see IQueue::recvMessage()
 	 */
-	public function recvMessage($msgId) {
-		msg_receive($this->rc,0,$msgtype,$this::$__MESSAGE_MAX_SIZE__,$data);
-		return $data;
+	public function recvMessage(&$data) {
+		return msg_receive($this->rc,0,$msgtype,$this::$__MESSAGE_MAX_SIZE__,$data);
 	}
 }

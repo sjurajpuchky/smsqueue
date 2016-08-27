@@ -13,7 +13,7 @@ interface IQueue {
 	/**
 	 * recvMessage - function to receive message from queue
 	 */
-	public function recvMessage();
+	public function recvMessage(&$data);
 	/**
 	* Remove queue
 	*/
