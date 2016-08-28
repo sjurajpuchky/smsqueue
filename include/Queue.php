@@ -20,7 +20,7 @@ class Queue implements IQueue {
 	 * @param string $lockFile
 	 */
 	public function __construct($lockFile="./queue.lock") {
-		$qid = ftok($lockFile, "queue");
+		$qid = ftok($lockFile, "q");
 		$this->rc = msg_get_queue($qid);
 	}
 	/**
@@ -45,6 +45,6 @@ class Queue implements IQueue {
 	 * @see IQueue::recvMessage()
 	 */
 	public function recvMessage(&$data) {
-		return msg_receive($this->rc,0,$msgtype,$this::$__MESSAGE_MAX_SIZE__,$data);
+		return msg_receive($this->rc,$this::$__MESSAGE_TYPE__,$msgtype,$this::$__MESSAGE_MAX_SIZE__,$data);
 	}
 }

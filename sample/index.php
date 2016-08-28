@@ -1,9 +1,9 @@
 <?php
+header('Content-Type: text/html');
 include_once __DIR__.'/../include/SMSGateWay.php';
 if(isset($_POST["btnSend"])) {
 	$gw = new SMSGateWay(__DIR__."/smsgateway.lock");
 	$gw->sendMessage($_POST["number"], $_POST["message"]);
-	$gw->processMessages();
 }
 ?>
 
