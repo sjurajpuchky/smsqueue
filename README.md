@@ -1,5 +1,5 @@
 # SMS Queue
-@copyright (c) 2016 Juraj Puchký - [Devtech s.r.o.](http://www.devtech.cz)
+@copyright (c) 2016 Juraj PuchkÃ½ - [BABA Tumise s.r.o.](http://www.baba.bj)
 
 @license GPL
 
